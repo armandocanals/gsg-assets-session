@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import {add, subtract} from './math';
-import "./main.scss";
+import "./main.css";
 import Logo from "./node_logo.svg";
 
 let lodashOutput = document.getElementById("lodash-output");

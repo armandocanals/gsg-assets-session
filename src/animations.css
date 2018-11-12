@@ -1,0 +1,115 @@
+.btn-animation {
+  color: white;
+  background: blue;
+  transition: background 250ms ease-in-out;  
+}
+
+.btn-animation:hover {
+  background: red;
+}
+
+.ellipsis-loading span {
+  animation-name: pulse;
+  animation-duration: 1.25s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.ellipsis-loading span:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.ellipsis-loading span:nth-child(3) {
+  animation-delay: .4s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: .25;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .25;
+  }
+}  
+
+.flash {
+  animation: flash 0.250s ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes flash {
+  0% { background-color: none; }
+  50% { background-color: #ffffff;
+        color: #ffffff;}
+  100% { background-color: none;
+         color: initial; }
+}
+
+.slidein {
+  animation: slidein ease-in-out 0.425s;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(-110px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.slideout {
+  animation: slideout ease-in-out 0.425s;
+}
+
+@keyframes slideout {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-110px);
+  }
+}
+
+.slidein-long {
+  animation: long-slidein ease-in-out 2s;
+}
+
+@keyframes long-slidein {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(500px);
+  }
+}
+
+/* Page Styles */
+.ellipsis-loading span {
+  font-size: 80px;
+}
+
+.flash-item {
+  font-size: 40px;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #000;
+}
+
+.off-screen {
+  transform: translateX(-110px);
+}
+
+.slide-container .square.pin {
+  transform: translateX(0px);
+}
+
+.long-slide-container .square.pin {
+  transform: translateX(500px);
+}

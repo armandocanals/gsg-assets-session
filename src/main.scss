@@ -1,1 +1,45 @@
-@import "test"
+$base-spacing: 1em !default;
+$flashes: (
+  "alert": #fff6bf,
+  "danger": #f2dede,
+  "notice": #e5edf8,
+  "success": #dff0d8,
+  "tip": #d6ecfc,
+) !default;
+
+@each $flash-type, $color in $flashes {
+  .flash-#{$flash-type} {
+    background-color: $color;
+    color: darken($color, 60%);
+    border: 1px solid shade($color, 10%);
+    border-radius: 4px;
+    display: block;
+    margin: $base-spacing 0 $base-spacing 0;
+    padding: $base-spacing;
+    text-align: left;
+
+    a {
+      color: darken($color, 60%);
+      text-decoration: underline;
+
+      &:focus,
+      &:hover {
+        color: shade($color, 90%);
+      }
+    }
+
+    p:first-of-type {
+      margin-top: 0;
+    }
+
+    .close-flash {
+      background: none;
+      border: none;
+      float: right;
+      font-size: 1.5em;
+      color: darken($color, 30%);
+      top: -0.7em;
+      position: relative;
+    }
+  }
+}
